@@ -16,7 +16,7 @@ from copy import deepcopy
 
 
 
-#以下3行分を追加しています。
+#修正箇所1：以下3行分を追加しています。
 from yahpo_gym.local_config import LocalConfiguration
 local_config = LocalConfiguration()
 local_config.init_config()
@@ -145,7 +145,7 @@ def run_optuna(scenario, instance, target, minimize, on_integer_scale, n_trials,
 
 
 
-# 修正箇所：以下の部分が追加した分です
+# 修正箇所2：以下の部分が追加した分です
 
 scenario = rbv2._rbv2_super
 instance = 40966
