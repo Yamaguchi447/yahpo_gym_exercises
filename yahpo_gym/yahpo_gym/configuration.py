@@ -83,7 +83,7 @@ class ConfigDict():
         This provides a thin wrapper allowing for easy updating and retrieving of 
         configurations pertaining to a specific benchmark scenario.
         """
-        self.configs = {'instance_names':40966}
+        self.configs = {'instance_names':40966} #修正箇所１：辞書にinstance_namesを追加しました。元々ここは空の辞書になっていました。
 
     def update(self, config_dict: Dict):
         """
@@ -105,7 +105,7 @@ class ConfigDict():
         key: str
             The key of the configuration to retrieve
         """
-        return Configuration(self.configs, **kwargs)
+        return Configuration(self.configs, **kwargs) #修正箇所2：self.configs[key]となっていたのを、self.configsに変更しています。
 
     def __repr__(self):
         return f"Configuration Dictionary ({len(self.configs)} benchmarks)"
