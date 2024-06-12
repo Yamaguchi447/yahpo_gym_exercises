@@ -22,7 +22,7 @@ class LocalConfiguration():
             if 'YAHPO_LOCAL_CONFIG' in os.environ:
                 settings_path = os.environ['YAHPO_LOCAL_CONFIG']
             else: 
-                settings_path = "/Users/yotaroy./.config/yahpo_gym"
+                settings_path = "/Users/yotaroy./.config/yahpo_gym"  # 変更箇所：ここのパスを自身のPCのパスに変更しています。
         self.settings_path = Path(settings_path).expanduser().absolute()
         self._config = None
     
